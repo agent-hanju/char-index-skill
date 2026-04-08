@@ -1,6 +1,6 @@
 {
   "name": "char-index-skill",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Character-level string manipulation: find nth char/substring, split at indices, extract ranges, modify at positions.",
   "author": {
     "name": "agent-hanju",

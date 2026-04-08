@@ -2,14 +2,13 @@
 name: char-index-skill
 description: "Character-level string manipulation: find nth char/substring, split at indices, extract ranges, modify at positions. For test generation, parsing, position-critical tasks."
 allowed-tools: Bash, Read, Grep
-argument-hint: "<command> [options]"
 ---
 
 # Char-Index String Manipulation
 
 Precise index-based string operations. Use when you need exact character positioning for test generation, parsing, or LLM response extraction.
 
-## 📦 Operations (11 tools)
+## Operations (12 tools)
 
 All via `python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py <command> [options]`. Returns JSON.
 
@@ -19,7 +18,7 @@ All via `python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py <command> [options]`. Re
 - `find-nth-substring`: Find nth occurrence of substring → `{"index": N}`
 - `find-all-substrings`: All positions of substring → `{"indices": [...]}`
 
-### Splitting & Extraction (3)
+### Splitting & Extraction (4)
 - `split-at`: Split at indices → `{"parts": [...]}`
 - `extract`: Substring by range → `{"substring": "...", "length": N}`
 - `extract-between`: Content between markers → `{"content": "...", "content_start": N, ...}`
@@ -33,7 +32,7 @@ All via `python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py <command> [options]`. Re
 ### Utilities (1)
 - `count`: Character statistics → `{"total": N, "letters": N, "digits": N, ...}`
 
-## 🚀 Quick Reference
+## Quick Reference
 
 | Task | Command |
 |------|---------|
@@ -47,7 +46,7 @@ All via `python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py <command> [options]`. Re
 | Replace range | `replace --text "hello world" --start 6 --end 11 --replacement "Python"` |
 | Count chars | `count --text "hello world"` |
 
-## 💡 Usage Patterns
+## Usage Patterns
 
 **Basic:**
 ```bash
@@ -69,7 +68,7 @@ python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py extract-batch \
   --ranges '[{"start":0,"end":5},{"start":6,"end":11}]'
 ```
 
-## ⚡ Key Points
+## Key Points
 
 - **0-indexed**: All positions start from 0
 - **1-based occurrence**: `find-nth-*` uses `--n 1` for first occurrence
@@ -79,7 +78,7 @@ python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py extract-batch \
 - **Unicode safe**: Each Unicode character = 1 position
 - **Overlaps included**: `find-all-*` finds overlapping matches
 
-## 📖 More Info
+## More Info
 
 - Practical examples: [examples.md](examples.md)
 - Command help: `python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py --help`

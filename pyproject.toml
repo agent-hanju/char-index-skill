@@ -1,5 +1,5 @@
 # MCP server (char-index-mcp) build config for PyPI distribution.
-# The main project is a Claude Code Skill plugin (.claude-plugin/plugin.json).
+# This project (char-index-skill) is a Claude Skills project. See .claude-plugin/plugin.json.
 [project]
 name = "char-index-mcp"
 version = "0.3.0"

@@ -30,7 +30,7 @@ python ${CLAUDE_SKILL_DIR}/scripts/char_ops.py <command> [options]
 
 See [SKILL.md](skills/char-index-skill/SKILL.md) for the full command reference.
 
-## Features (11 Operations)
+## Features (12 Operations)
 
 ### Finding (4)
 - `find-nth-char` - Find nth occurrence of a character
@@ -101,7 +101,7 @@ char-index-skill/
 │   └── char-index-skill/
 │       ├── SKILL.md               # Skill definition
 │       ├── examples.md            # Usage examples
-│       └── scripts/char_ops.py    # Implementation (11 operations)
+│       └── scripts/char_ops.py    # Implementation (12 operations)
 ├── char_index_mcp/                # MCP server (legacy)
 │   ├── server.py
 │   ├── char_ops.py                # Synced copy
@@ -128,7 +128,7 @@ mypy char_index_mcp/
 
 ## MCP Server (Legacy)
 
-The `char-index-mcp` package provides the same 11 operations as an MCP server for integration with Claude Desktop, Cursor, and other MCP clients. This is maintained for backward compatibility but the Claude Code Skill is the recommended approach.
+The `char-index-mcp` package provides the same 12 operations as an MCP server for integration with Claude Desktop, Cursor, and other MCP clients. This is maintained for backward compatibility but the Claude Code Skill is the recommended approach.
 
 ```bash
 # Install
