@@ -1,6 +1,6 @@
 # char-index-skill
 
-**Character-level index-based string manipulation** as a Claude Code Skill (plugin).
+**Character-level index-based string manipulation** as a Claude Code Skill.
 
 LLMs generate text token-by-token and struggle with exact character counting. This skill provides precise index-based tools for test code generation, string parsing, and position-critical tasks.
 
@@ -10,20 +10,13 @@ LLMs generate text token-by-token and struggle with exact character counting. Th
 
 ## Installation
 
-### As a Claude Code Plugin (Recommended)
-
-```bash
-# Install the plugin
-claude plugin install char-index-skill
-```
-
-Or clone and use directly:
+Clone the repository:
 
 ```bash
 git clone https://github.com/agent-hanju/char-index-skill.git
 ```
 
-The skill is in `skills/char-index-skill/` and will be automatically available in Claude Code.
+Copy `skills/char-index-skill/` into your project's `.claude/skills/` directory, or use it directly from the cloned repo.
 
 ### Usage
 
@@ -104,7 +97,6 @@ See [examples.md](skills/char-index-skill/examples.md) for more practical exampl
 
 ```
 char-index-skill/
-├── .claude-plugin/plugin.json     # Plugin manifest
 ├── skills/
 │   └── char-index-skill/
 │       ├── SKILL.md               # Skill definition
